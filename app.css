@@ -39,12 +39,22 @@ body {
   box-sizing: border-box;
 }
 
+
+
 .desktop-container {
   height: calc(100vh - 2.3rem);
   width: 100vw;
   background: #008080;
 
   display: flex;
+}
+
+.item-wrapper {
+  width: 90%;
+  height: 100%;
+  /* padding: .05rem .25rem; */
+  display: flex;
+  box-sizing: border-box;
 }
 
 
@@ -76,6 +86,11 @@ body {
   padding-right: .5rem;
 }
 
+.credit-item {
+  width: 10%;
+  min-width: 5.5rem;
+}
+
 .item-logo {
   height: 1.5rem;
   padding-right: .2rem;
@@ -89,9 +104,11 @@ body {
 }
 
 .item-wide {
-  width: 12.5rem;
+  width: 25%;
+  max-width: 12.5rem;
   justify-content: flex-start;
   padding: 0 .5rem;
+
 }
 /* ----- */
 
@@ -330,22 +347,44 @@ body {
 
 @media screen and (max-width: 500px) {
   .desktop-container {
-    height: calc(100vh - 11.5rem);
+    height: calc(100vh - 4.6rem);
   }
   .window-container {
-    height: calc(100vh - 21.8rem);
+    height: calc(100vh - 18rem);
   }
+
   .taskbar {
+    height: 4.6rem;
     flex-direction: column;
-    height: 11.5rem;
   }
-  .item {
-    width: 100%;
-    height: 2.3rem;
-    justify-content: center;
-    
-  }
+
   .item-wide {
+    width: 25%;
+    /* height: 5rem; */
+    justify-content: center;
+    max-width: initial;
+  }
+
+  #credit-item {
     width: 100%;
+  }
+
+  .item-wrapper {
+    width: 100%;
+    padding-top: .1rem;
+  }
+
+  #contact-item {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .item p {
+    
+    font-size: 12px;
+  }
+  .item-logo {
+    display: none;
   }
 }
