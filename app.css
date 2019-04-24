@@ -184,6 +184,13 @@ body {
   margin: 0;
 }
 
+.window-header {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: solid #bfbfbf 1px;
+}
+
 .window h1 {
   font-weight: bold;
   font-size: .75rem;
@@ -253,9 +260,10 @@ body {
   height: 100%;
   padding: .8rem;
   overflow: auto;
+  overflow-y: scroll;
 }
 
-@media screen and (max-width: 695px) {
+@media screen and (max-width: 520px) {
   .window-inner {
     display: flex;
     flex-direction: column;
@@ -315,7 +323,9 @@ body {
 }
 
 #portrait {
-  max-width: 20rem;
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
   float: left;
   padding: 0 1rem 1rem 0;
 }
@@ -355,7 +365,7 @@ body {
 
   .taskbar {
     height: 4.6rem;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .item-wide {
@@ -371,7 +381,7 @@ body {
 
   .item-wrapper {
     width: 100%;
-    padding-top: .1rem;
+    padding-bottom: .1rem;
   }
 
   #contact-item {
